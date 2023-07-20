@@ -1,4 +1,3 @@
-/* Reset default margin and padding for the entire page */
 body {
     margin: 0;
     padding: 0;
@@ -13,7 +12,7 @@ body {
     align-items: center;
     justify-content: space-between;
   }
-  /* Style for the refresh button */
+
   #refreshButton {
     background: none;
     border: none;
@@ -42,12 +41,11 @@ body {
     border-width: 0px;
     border-top-width: 2px;
   }
-  /* Style for the task items */
+
   ul {
     list-style-type: none;
     padding: 0;
     margin-bottom: -10px;
-    
   }
   
   li {
@@ -61,24 +59,20 @@ body {
   
   }
   
-  /* Styling for the task description */
   span {
     flex-grow: 1;
     margin-left: 10px;
   }
   
-  /* Styling for completed tasks */
   .completed {
     text-decoration: line-through;
     color: rgb(213, 65, 65);
   }
   
-  /* Styling for incomplete tasks */
   .incomplete {
     color: #333;
   }
-  
-  /* Styling for the checkbox */
+
   input[type="checkbox"] {
     margin-right: 10px;  
   }
@@ -87,7 +81,7 @@ body {
     margin: 1px;
     color: #080808;
     cursor: pointer;
-    writing-mode: vertical-lr; /* Make the ellipsis appear vertically */
+    writing-mode: vertical-lr;  
     text-orientation: upright;
     margin-right: -1px; 
   }
