@@ -111,3 +111,16 @@ p {
 .clearCompletedText:hover {
   color: #0056b3;
 }
+
+ul li.selected {
+  background-color: yellow;
+}
+li .taskOptions .fa-trash-alt {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add this CSS to style the selected task */
+li.selected {
+  background-color: yellow;
+}

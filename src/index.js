@@ -1,36 +1,18 @@
 import './style.css';
-import tasks from './modules/tasks.js';
+import { addNewTask, deleteTask, editTaskDescription, renderTasks } from './modules/new.js';
 
-function renderTasks() {
-  const appElement = document.getElementById('app');
-  const ulElement = document.createElement('ul');
 
-  tasks.sort((a, b) => a.index - b.index);
+const newTaskInput = document.getElementById('newTaskInput');
 
-  tasks.forEach((task) => {
-    const liElement = document.createElement('li');
+newTaskInput.addEventListener('keypress', event => {
+  if (event.key === 'Enter') {
+    const newTaskDescription = newTaskInput.value.trim();
+    if (newTaskDescription !== '') {
+      addNewTask(newTaskDescription);
+      newTaskInput.value = '';
+    }
+  }
+});
 
-    const checkboxElement = document.createElement('input');
-    checkboxElement.type = 'checkbox';
-    checkboxElement.checked = task.completed;
-    liElement.appendChild(checkboxElement);
-
-    const descriptionElement = document.createElement('span');
-    descriptionElement.textContent = task.description;
-    liElement.appendChild(descriptionElement);
-
-    liElement.classList.add(task.completed ? 'completed' : 'incomplete');
-
-    const ellipsisElement = document.createElement('div');
-    ellipsisElement.classList.add('taskOptions');
-    ellipsisElement.innerHTML = '<i class="fas fa-ellipsis-v"></i>'; // Use Font Awesome icon
-    liElement.appendChild(ellipsisElement);
-
-    liElement.appendChild(ellipsisElement);
-
-    ulElement.appendChild(liElement);
-  });
-
-  appElement.appendChild(ulElement);
-}
+// Initial rendering of tasks
 renderTasks();
