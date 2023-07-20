@@ -1,109 +1,113 @@
 body {
-    margin: 0;
-    padding: 0;
-  }
-  
- h1{
-    text-align: center;
-    color: #0056b3;
- }
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #0056b3;
+}
+
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  #refreshButton {
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: #080808;
-    cursor: pointer;
-  }
-  .header h1{
-    font-size: 20px;
-    color: black;
-  }
-  
-  #app{
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: rgb(243, 248, 248);
-  }
-  .newTaskInput{
-    margin-bottom: -7px;
-    padding: 8px;
-    min-width: 480px;
-    max-width: 500px;
-    height: 40px;
-    border-color:#ccc;
-    border-width: 0px;
-    border-top-width: 2px;
-  }
+#refreshButton {
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: #080808;
+  cursor: pointer;
+}
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: -10px;
-  }
-  
-  li {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    height: 40px;
-    border: 1px solid #ccc;
-    border-width: 0px;
-    border-top-width: 2px;
-  
-  }
-  
-  span {
-    flex-grow: 1;
-    margin-left: 10px;
-  }
-  
-  .completed {
-    text-decoration: line-through;
-    color: rgb(213, 65, 65);
-  }
-  
-  .incomplete {
-    color: #333;
-  }
+.header h1 {
+  font-size: 20px;
+  color: black;
+}
 
-  input[type="checkbox"] {
-    margin-right: 10px;  
-  }
+#app {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(243, 248, 248);
+}
 
-  .taskOptions {
-    margin: 1px;
-    color: #080808;
-    cursor: pointer;
-    writing-mode: vertical-lr;  
-    text-orientation: upright;
-    margin-right: -1px; 
-  }
-   p{
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    width: 100%;
-    height: 40px;
-    background-color: grey;
-  }
-  .clearCompletedText {
-    cursor: pointer;
-    color: #f9fafc;
-    text-decoration: underline;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 25px;
-  }
-  
-  .clearCompletedText:hover {
-    color: #0056b3;
-  }
+.newTaskInput {
+  margin-bottom: -7px;
+  padding: 8px;
+  min-width: 480px;
+  max-width: 500px;
+  height: 40px;
+  border-color: #ccc;
+  border-width: 0;
+  border-top-width: 2px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: -10px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-width: 0;
+  border-top-width: 2px;
+}
+
+span {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: rgb(213, 65, 65);
+}
+
+.incomplete {
+  color: #333;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.taskOptions {
+  margin: 1px;
+  color: #080808;
+  cursor: pointer;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  margin-right: -1px;
+}
+
+p {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  height: 40px;
+  background-color: grey;
+}
+
+.clearCompletedText {
+  cursor: pointer;
+  color: #f9fafc;
+  text-decoration: underline;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.clearCompletedText:hover {
+  color: #0056b3;
+}
