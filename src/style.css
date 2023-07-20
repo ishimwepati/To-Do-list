@@ -1,0 +1,115 @@
+/* Reset default margin and padding for the entire page */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+ h1{
+    text-align: center;
+    color: #0056b3;
+ }
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* Style for the refresh button */
+  #refreshButton {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #080808;
+    cursor: pointer;
+  }
+  .header h1{
+    font-size: 20px;
+    color: black;
+  }
+  
+  #app{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(243, 248, 248);
+  }
+  .newTaskInput{
+    margin-bottom: -7px;
+    padding: 8px;
+    min-width: 480px;
+    max-width: 500px;
+    height: 40px;
+    border-color:#ccc;
+    border-width: 0px;
+    border-top-width: 2px;
+  }
+  /* Style for the task items */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: -10px;
+    
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-width: 0px;
+    border-top-width: 2px;
+  
+  }
+  
+  /* Styling for the task description */
+  span {
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  
+  /* Styling for completed tasks */
+  .completed {
+    text-decoration: line-through;
+    color: rgb(213, 65, 65);
+  }
+  
+  /* Styling for incomplete tasks */
+  .incomplete {
+    color: #333;
+  }
+  
+  /* Styling for the checkbox */
+  input[type="checkbox"] {
+    margin-right: 10px;  
+  }
+
+  .taskOptions {
+    margin: 1px;
+    color: #080808;
+    cursor: pointer;
+    writing-mode: vertical-lr; /* Make the ellipsis appear vertically */
+    text-orientation: upright;
+    margin-right: -1px; 
+  }
+   p{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: grey;
+  }
+  .clearCompletedText {
+    cursor: pointer;
+    color: #f9fafc;
+    text-decoration: underline;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+  }
+  
+  .clearCompletedText:hover {
+    color: #0056b3;
+  }
