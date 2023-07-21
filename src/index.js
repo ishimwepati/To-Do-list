@@ -14,5 +14,4 @@ newTaskInput.addEventListener('keypress', (event) => {
   }
 });
 
-// Initial rendering of tasks
 renderTasks();

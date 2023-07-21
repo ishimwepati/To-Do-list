@@ -1,4 +1,4 @@
-// edit.js
+
 import { tasks } from './new.js';
 import { renderTasks } from './new.js';
 
@@ -18,7 +18,7 @@ function saveEditedTaskDescription(index) {
     if (liElement) {
       liElement.contentEditable = false;
       tasks[index].description = liElement.textContent.trim();
-      renderTasks(); // Re-render the tasks after editing the description
+      renderTasks(); 
     }
   }
 }

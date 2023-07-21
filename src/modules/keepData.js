@@ -1,4 +1,3 @@
-// localStorage.js
 
 function saveTasksToLocalStorage(tasks) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
