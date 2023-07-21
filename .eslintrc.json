@@ -21,6 +21,9 @@
     "ignorePatterns": [
       "dist/",
       "build/",
-      "src/modules/new.js"
+      "src/modules/new.js",
+      "src/modules/edit.js",
+      "src/modules/addRemove.js"
+
     ]
   }

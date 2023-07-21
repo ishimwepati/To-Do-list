@@ -1,4 +1,4 @@
-import { renderTasks, tasks } from './new.js'; // eslint-disable-line
+import { renderTasks, tasks } from './new.js';
 
 export const addNewTask = (description) => {
   tasks.push({
