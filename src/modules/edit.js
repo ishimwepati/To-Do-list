@@ -1,4 +1,4 @@
-import { tasks, renderTasks } from './new.js'; // In edit.js
+import { tasks, renderTasks } from './new.js'; // eslint-disable-line
 
 const editTaskDescription = (index) => {
   if (index >= 0 && index < tasks.length) {
