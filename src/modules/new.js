@@ -1,10 +1,9 @@
-
 import { editTaskDescription, saveEditedTaskDescription } from './edit.js';
 import { saveTasksToLocalStorage, loadTasksFromLocalStorage } from './keepData.js';
 
-let tasks = loadTasksFromLocalStorage();
+const tasks = loadTasksFromLocalStorage();
 
-function renderTasks() {
+const renderTasks = () => {
   const appElement = document.getElementById('app');
   appElement.innerHTML = '';
 
@@ -14,11 +13,12 @@ function renderTasks() {
   const newTaskInput = document.createElement('input');
   newTaskInput.id = 'newTaskInput';
   newTaskInput.type = 'text';
-  newTaskInput.placeholder = 'Type a new task and press Enter to add...';
+  newTaskInput.placeholder = 'Add to your To Do List';
   inputContainer.appendChild(newTaskInput);
 
   const addButton = document.createElement('button');
-  addButton.innerText = 'Add Task';
+  addButton.id = 'addButton';
+  addButton.innerHTML = '<i class="fas fa-arrow-right"></i>';
   addButton.addEventListener('click', () => {
     const newTaskDescription = newTaskInput.value.trim();
     if (newTaskDescription !== '') {
@@ -30,13 +30,13 @@ function renderTasks() {
 
   const ulElement = document.createElement('ul');
 
-  tasks.sort((a, b) => a.index - b.index); 
+  tasks.sort((a, b) => a.index - b.index);
 
-  let selectedTaskIndex = -1; 
+  let selectedTaskIndex = -1;
 
-  tasks.forEach((task, index) => {
+  for (const [index, task] of tasks.entries()) {
     const liElement = document.createElement('li');
-    liElement.id = `task-${index}`; 
+    liElement.id = `task-${index}`;
 
     const checkboxElement = document.createElement('input');
     checkboxElement.type = 'checkbox';
@@ -47,7 +47,7 @@ function renderTasks() {
     descriptionElement.textContent = task.description;
     liElement.appendChild(descriptionElement);
 
-   liElement.classList.add(task.completed ? 'completed' : 'incomplete');
+    liElement.classList.add(task.completed ? 'completed' : 'incomplete');
 
     const ellipsisElement = document.createElement('div');
     ellipsisElement.classList.add('taskOptions');
@@ -59,7 +59,7 @@ function renderTasks() {
     deleteButton.classList.add('deleteButton');
     deleteButton.style.display = 'none';
     deleteButton.addEventListener('click', (event) => {
-      event.stopPropagation(); 
+      event.stopPropagation();
       deleteTask(index);
     });
 
@@ -91,34 +91,35 @@ function renderTasks() {
     });
 
     ulElement.appendChild(liElement);
-  });
+  }
 
   appElement.appendChild(inputContainer);
   appElement.appendChild(ulElement);
 
   saveTasksToLocalStorage(tasks);
-}
+};
 
-function addNewTask(description) {
+const addNewTask = (description) => {
   tasks.push({
-    description: description,
+    description,
     completed: false,
     index: tasks.length + 1,
   });
+  renderTasks();
+};
 
-  renderTasks(); 
-}
-
-  function deleteTask(index) {
+const deleteTask = (index) => {
   if (index >= 0 && index < tasks.length) {
     tasks.splice(index, 1);
 
-    for (let i = index; i < tasks.length; i++) {
+    for (let i = index; i < tasks.length; i += 1) {
       tasks[i].index = i + 1;
     }
 
-    renderTasks();  
+    renderTasks();
   }
-}
+};
 
-export { addNewTask, deleteTask, renderTasks, editTaskDescription, tasks };
+export {
+  addNewTask, deleteTask, renderTasks, editTaskDescription, tasks,
+};

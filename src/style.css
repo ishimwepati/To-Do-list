@@ -12,6 +12,11 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-bottom: -20px;
+  background-color: rgb(243, 248, 248);
 }
 
 #refreshButton {
@@ -43,6 +48,27 @@ h1 {
   border-color: #ccc;
   border-width: 0;
   border-top-width: 2px;
+}
+
+#newTaskInput {
+  margin-bottom: -14px;
+  padding: 8px;
+  min-width: 400px;
+  max-width: 500px;
+  height: 40px;
+  border-color: #ccc;
+  border-width: 0;
+}
+
+#addButton {
+  margin-bottom: -14px;
+  padding: 8px;
+  min-width: 80px;
+  max-width: 200px;
+  height: 58px;
+  border-color: #ccc;
+  border-width: 0;
+  background-color: #fff;
 }
 
 ul {
@@ -112,15 +138,15 @@ p {
   color: #0056b3;
 }
 
+li.selected {
+  background-color: yellow;
+}
+
 ul li.selected {
   background-color: yellow;
 }
+
 li .taskOptions .fa-trash-alt {
   color: red;
   cursor: pointer;
-}
-
-/* Add this CSS to style the selected task */
-li.selected {
-  background-color: yellow;
 }

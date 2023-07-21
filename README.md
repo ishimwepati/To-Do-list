@@ -34,13 +34,14 @@
 <!-- INTRO -->
 # 📖 Portfolio <a name="about-project"></a>
 
-> This is a To Do List project with just HTML and CSS using ES6 using WebPack
+> This is a To Do List project with just HTML and CSS using ES6 using WebPack 
 
 ## 🛠 Built With <a name="built-with"></a>
 1. HTML
 2. Linters
 3. JavaScript ES6
 4. CSS
+5. WebPack 
 ### Tech Stack <a name="tech-stack"></a>
 
 > This is a version with both view Desktop and Mobile Version
@@ -60,10 +61,12 @@
 ### Key Features <a name="key-features"></a>
 
 > - Added Linters
+> - CRUD added (Add, Remove, Edit and Keep a Task)
 > - Added ES6
 > - Added HTML
 > - Added Javascript
 > - CSS added
+> - Preserved datain the LocalStorage
 > - Added HTML syntx from JS
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -88,6 +91,7 @@
 2. A Code Editor
 3. Internet Connection
 4. Git
+5. Install WebPack
 
 <!-- SETUP -->
 ### Setup
@@ -126,11 +130,6 @@ You can deploy this project using:
 - GitHub: [@ishimwepati](https://github.com/ishimwepati)
 - Twitter: [@PatientMusafir1](https://twitter.com/PatientMusafir1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ishimwe-joseph-patient-0537b4155/)
-
-👤 **Kenny Henshaw**
-
-- GitHub: [@armynerh](https://github.com/Armynerh)
-- LinkedIn: [@Kehinde](https://www.linkedin.com/in/kehinde-aminah-h/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
