@@ -32,10 +32,10 @@ function renderTasks() {
 
   let selectedTaskIndex = -1; // Initialize with no selected task
 
-    tasks.forEach((task, index) => {
-        const liElement = document.createElement('li');
-        liElement.id = `task-${index}`; // Add an ID to the task element for easy access
-      
+  tasks.forEach((task, index) => {
+    const liElement = document.createElement('li');
+    liElement.id = `task-${index}`; // Add an ID to the task element for easy access
+
     // Create a checkbox input element for task completion
     const checkboxElement = document.createElement('input');
     checkboxElement.type = 'checkbox';
@@ -68,42 +68,41 @@ function renderTasks() {
     liElement.appendChild(deleteButton);
 
     liElement.addEventListener('click', () => {
-        if (selectedTaskIndex !== -1) {
-          // If there's a previously selected task, deselect it
-          ulElement.children[selectedTaskIndex].classList.remove('selected');
-          ulElement.children[selectedTaskIndex].querySelector('.deleteButton').style.display = 'none';
-          ulElement.children[selectedTaskIndex].querySelector('.taskOptions').style.display = 'block';
-        }
-      
-        if (selectedTaskIndex === index) {
-          // If the same task is clicked again, deselect it
-          selectedTaskIndex = -1;
-        } else {
-          // Toggle the 'selected' class for the clicked task
-          liElement.classList.toggle('selected');
-          selectedTaskIndex = liElement.classList.contains('selected') ? index : -1;
-          liElement.querySelector('.deleteButton').style.display = 'block';
-          liElement.querySelector('.taskOptions').style.display = 'none';
-        }
-      });
+      if (selectedTaskIndex !== -1) {
+        // If there's a previously selected task, deselect it
+        ulElement.children[selectedTaskIndex].classList.remove('selected');
+        ulElement.children[selectedTaskIndex].querySelector('.deleteButton').style.display = 'none';
+        ulElement.children[selectedTaskIndex].querySelector('.taskOptions').style.display = 'block';
+      }
+
+      if (selectedTaskIndex === index) {
+        // If the same task is clicked again, deselect it
+        selectedTaskIndex = -1;
+      } else {
+        // Toggle the 'selected' class for the clicked task
+        liElement.classList.toggle('selected');
+        selectedTaskIndex = liElement.classList.contains('selected') ? index : -1;
+        liElement.querySelector('.deleteButton').style.display = 'block';
+        liElement.querySelector('.taskOptions').style.display = 'none';
+      }
+    });
+
+    liElement.addEventListener('dblclick', () => {
+      editTaskDescription(index);
+    });
+
+    liElement.addEventListener('blur', () => {
+      saveEditedTaskDescription(index);
+    });
 
     ulElement.appendChild(liElement);
   });
 
   appElement.appendChild(inputContainer);
   appElement.appendChild(ulElement);
+}
+
   
-    liElement.addEventListener('dblclick', () => {
-        editTaskDescription(index);
-    });
-
-    liElement.addEventListener('blur', () => {
-        saveEditedTaskDescription(index);
-    });
-
-    ulElement.appendChild(liElement);
-    });
-    }
 
 function addNewTask(description) {
   tasks.push({
