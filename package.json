@@ -26,6 +26,7 @@
     "stylelint-scss": "^3.21.0",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "webpack-lighthouse-plugin": "^1.0.9"
   }
 }
