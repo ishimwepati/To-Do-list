@@ -1,6 +1,6 @@
-import { editTaskDescription, saveEditedTaskDescription } from './edit.js';// eslint-disable-line
+import { editTaskDescription, saveEditedTaskDescription } from './edit.js';
 import { saveTasksToLocalStorage, loadTasksFromLocalStorage } from './keepData.js';
-import { addNewTask, deleteTask } from './addRemove.js';// eslint-disable-line
+import { addNewTask, deleteTask } from './addRemove.js';
 
 const tasks = loadTasksFromLocalStorage();
 
