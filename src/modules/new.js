@@ -1,4 +1,11 @@
-const tasks = [];
+// new.js
+
+// new.js
+import { editTaskDescription, saveEditedTaskDescription } from './edit.js';
+import { saveTasksToLocalStorage, loadTasksFromLocalStorage } from './keepData.js';
+
+let tasks = loadTasksFromLocalStorage();
+// ... (existing code)
 
 function renderTasks() {
   const appElement = document.getElementById('app');
@@ -100,9 +107,10 @@ function renderTasks() {
 
   appElement.appendChild(inputContainer);
   appElement.appendChild(ulElement);
-}
 
-  
+  // Update the local storage with the current tasks
+  saveTasksToLocalStorage(tasks);
+}
 
 function addNewTask(description) {
   tasks.push({
@@ -117,29 +125,18 @@ function addNewTask(description) {
 function deleteTask(index) {
   if (index >= 0 && index < tasks.length) {
     tasks.splice(index, 1);
-    renderTasks(); // Re-render the tasks after deletion
+
+    // Update indexes for the remaining tasks
+    for (let i = index; i < tasks.length; i++) {
+      tasks[i].index = i + 1;
+    }
+
+    renderTasks(); // Re-render the tasks after deletion and index update
   }
 }
 
-function editTaskDescription(index) {
-    if (index >= 0 && index < tasks.length) {
-      const liElement = document.getElementById(`task-${index}`);
-      if (liElement) {
-        liElement.contentEditable = true;
-        liElement.focus();
-      }
-    }
-  }
-  
-  function saveEditedTaskDescription(index) {
-    if (index >= 0 && index < tasks.length) {
-      const liElement = document.getElementById(`task-${index}`);
-      if (liElement) {
-        liElement.contentEditable = false;
-        tasks[index].description = liElement.textContent.trim();
-        renderTasks(); // Re-render the tasks after editing the description
-      }
-    }
-  }
-  
-  export { addNewTask, deleteTask, editTaskDescription, saveEditedTaskDescription, renderTasks };
+// new.js
+
+// ... (existing code)
+
+export { addNewTask, deleteTask, renderTasks, editTaskDescription, tasks };
