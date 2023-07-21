@@ -75,7 +75,8 @@ const renderTasks = () => {
 
       if (selectedTaskIndex === index) {
         selectedTaskIndex = -1;
-      } else {
+      } 
+      else {
         liElement.classList.toggle('selected');
         selectedTaskIndex = liElement.classList.contains('selected') ? index : -1;
         liElement.querySelector('.deleteButton').style.display = 'block';
