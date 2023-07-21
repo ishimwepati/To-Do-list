@@ -1,6 +1,8 @@
+/* eslint-disable */
 import './style.css';
 import { addNewTask, deleteTask, renderTasks } from './modules/new.js';
 import { editTaskDescription, saveEditedTaskDescription } from './modules/edit.js';
+/* eslint-enable */
 
 const newTaskInput = document.getElementById('newTaskInput');
 

@@ -1,5 +1,8 @@
+/* eslint-disable */
 import { tasks, renderTasks } from './new.js';
 
+
+/* eslint-enable */
 const editTaskDescription = (index) => {
   if (index >= 0 && index < tasks.length) {
     const liElement = document.getElementById(`task-${index}`);

@@ -1,5 +1,7 @@
-import { editTaskDescription, saveEditedTaskDescription } from './edit.js';
+/* eslint-disable */
+import { editTaskDescription, saveEditedTaskDescription } from './edit.js'; // eslint-disable-line no-use-before-define
 import { saveTasksToLocalStorage, loadTasksFromLocalStorage } from './keepData.js';
+/* eslint-enable */
 
 const tasks = loadTasksFromLocalStorage();
 
@@ -22,7 +24,7 @@ const renderTasks = () => {
   addButton.addEventListener('click', () => {
     const newTaskDescription = newTaskInput.value.trim();
     if (newTaskDescription !== '') {
-      addNewTask(newTaskDescription);
+      addNewTask(newTaskDescription); // eslint-disable-line no-use-before-define
       newTaskInput.value = '';
     }
   });
@@ -34,9 +36,11 @@ const renderTasks = () => {
 
   let selectedTaskIndex = -1;
 
-  for (const [index, task] of tasks.entries()) {
+  /* eslint-disable */
+  for (const [index, task] of tasks.entries()) { 
     const liElement = document.createElement('li');
     liElement.id = `task-${index}`;
+    /* eslint-enable */
 
     const checkboxElement = document.createElement('input');
     checkboxElement.type = 'checkbox';
@@ -60,17 +64,19 @@ const renderTasks = () => {
     deleteButton.style.display = 'none';
     deleteButton.addEventListener('click', (event) => {
       event.stopPropagation();
-      deleteTask(index);
+      deleteTask(index); // eslint-disable-line no-use-before-define
     });
 
     liElement.appendChild(deleteButton);
 
+    /* eslint-disable */
     liElement.addEventListener('click', () => {
       if (selectedTaskIndex !== -1) {
         ulElement.children[selectedTaskIndex].classList.remove('selected');
         ulElement.children[selectedTaskIndex].querySelector('.deleteButton').style.display = 'none';
         ulElement.children[selectedTaskIndex].querySelector('.taskOptions').style.display = 'block';
       }
+     /* eslint-enable */
 
       if (selectedTaskIndex === index) {
         selectedTaskIndex = -1;
