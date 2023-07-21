@@ -1,7 +1,6 @@
-/* eslint-disable */
-import { editTaskDescription, saveEditedTaskDescription } from './edit.js'; // eslint-disable-line no-use-before-define
+import { editTaskDescription, saveEditedTaskDescription } from './edit.js';
 import { saveTasksToLocalStorage, loadTasksFromLocalStorage } from './keepData.js';
-/* eslint-enable */
+import { addNewTask, deleteTask } from './addRemove.js';
 
 const tasks = loadTasksFromLocalStorage();
 
@@ -24,7 +23,7 @@ const renderTasks = () => {
   addButton.addEventListener('click', () => {
     const newTaskDescription = newTaskInput.value.trim();
     if (newTaskDescription !== '') {
-      addNewTask(newTaskDescription); // eslint-disable-line no-use-before-define
+      addNewTask(newTaskDescription);
       newTaskInput.value = '';
     }
   });
@@ -36,11 +35,9 @@ const renderTasks = () => {
 
   let selectedTaskIndex = -1;
 
-  /* eslint-disable */
-  for (const [index, task] of tasks.entries()) { 
+  tasks.forEach((task, index) => {
     const liElement = document.createElement('li');
     liElement.id = `task-${index}`;
-    /* eslint-enable */
 
     const checkboxElement = document.createElement('input');
     checkboxElement.type = 'checkbox';
@@ -64,19 +61,17 @@ const renderTasks = () => {
     deleteButton.style.display = 'none';
     deleteButton.addEventListener('click', (event) => {
       event.stopPropagation();
-      deleteTask(index); // eslint-disable-line no-use-before-define
+      deleteTask(index);
     });
 
     liElement.appendChild(deleteButton);
 
-    /* eslint-disable */
     liElement.addEventListener('click', () => {
       if (selectedTaskIndex !== -1) {
         ulElement.children[selectedTaskIndex].classList.remove('selected');
         ulElement.children[selectedTaskIndex].querySelector('.deleteButton').style.display = 'none';
         ulElement.children[selectedTaskIndex].querySelector('.taskOptions').style.display = 'block';
       }
-     /* eslint-enable */
 
       if (selectedTaskIndex === index) {
         selectedTaskIndex = -1;
@@ -97,7 +92,7 @@ const renderTasks = () => {
     });
 
     ulElement.appendChild(liElement);
-  }
+  });
 
   appElement.appendChild(inputContainer);
   appElement.appendChild(ulElement);
@@ -105,27 +100,7 @@ const renderTasks = () => {
   saveTasksToLocalStorage(tasks);
 };
 
-const addNewTask = (description) => {
-  tasks.push({
-    description,
-    completed: false,
-    index: tasks.length + 1,
-  });
-  renderTasks();
-};
-
-const deleteTask = (index) => {
-  if (index >= 0 && index < tasks.length) {
-    tasks.splice(index, 1);
-
-    for (let i = index; i < tasks.length; i += 1) {
-      tasks[i].index = i + 1;
-    }
-
-    renderTasks();
-  }
-};
-
 export {
-  addNewTask, deleteTask, renderTasks, editTaskDescription, tasks,
+  renderTasks,
+  tasks,
 };

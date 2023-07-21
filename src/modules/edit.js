@@ -1,8 +1,5 @@
-/* eslint-disable */
-import { tasks, renderTasks } from './new.js';
+import { tasks, renderTasks } from './new.js'; // In edit.js
 
-
-/* eslint-enable */
 const editTaskDescription = (index) => {
   if (index >= 0 && index < tasks.length) {
     const liElement = document.getElementById(`task-${index}`);
@@ -24,4 +21,7 @@ const saveEditedTaskDescription = (index) => {
   }
 };
 
-export { editTaskDescription, saveEditedTaskDescription };
+export {
+  editTaskDescription,
+  saveEditedTaskDescription,
+};
