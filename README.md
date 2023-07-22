@@ -75,7 +75,7 @@
 
 ## 🚀 Live Demo <a name="live-demo" target="_blank"></a>
 
-- [Live Demo Link will be added shortly]()
+- [https://ishimwepati.github.io/To-Do-list/dist/]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
