@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WazaCode To do List Project</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>TO-DO List</title>
+</head>
 
-  </head>
 <body>
-    <h1>Welcome to WazaCode To DO List App</h1>
-    <div class="header">
-      <h1>Today's To Do</h1>
-      <button id="refreshButton">
-        <i class="fas fa-sync-alt"></i>
-      </button>
-    </div>
-    <div id="app">
-        <textarea id="newTaskInput" class="newTaskInput" placeholder="Add to your list"></textarea>
-        <ul id="todoList">
-    </div>
-        <p class="clearCompletedText" id="clearCompletedText">Clear all completed tasks</p>
-  <script src="index.js"></script>
+    <section class="to-do-box">
+        <ul class="to-do-list">
+            <li class="list-item" id="to-do-title">Today's To Do</li>
+            <li class="list-item">
+                <input class="input" type="text" placeholder="Add to your list...">
+            </li>
+        </ul>
+        <a class="clear">Clear all completed</a>
+    </section>
+    <script src="index.js"></script>
 </body>
+
 </html>
