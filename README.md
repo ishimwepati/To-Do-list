@@ -4,7 +4,7 @@
 
 <!-- MAIN HEADING -->
 
-  <h3><b>To Do List  Project</b></h3>
+  <h3><b>To Do List Testing with Jest</b></h3>
 
 </div>
 
@@ -42,6 +42,7 @@
 3. JavaScript ES6
 4. CSS
 5. WebPack 
+6. Jest
 ### Tech Stack <a name="tech-stack"></a>
 
 > This is a version with both view Desktop and Mobile Version
@@ -66,7 +67,7 @@
 > - Added HTML
 > - Added Javascript
 > - CSS added
-> - Preserved datain the LocalStorage
+> - Preserved data in the LocalStorage
 > - Added HTML syntx from JS
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -92,6 +93,8 @@
 3. Internet Connection
 4. Git
 5. Install WebPack
+6. Install Jest
+7. Install Babel
 
 <!-- SETUP -->
 ### Setup
@@ -131,11 +134,10 @@ You can deploy this project using:
 - Twitter: [@PatientMusafir1](https://twitter.com/PatientMusafir1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ishimwe-joseph-patient-0537b4155/)
 
-👤 **Kenny**
+👤 **Kehinde Henshaw**
 
-- GitHub: [@ishimwepati](https://github.com/ishimwepati)
-- Twitter: [@PatientMusafir1](https://twitter.com/PatientMusafir1)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ishimwe-joseph-patient-0537b4155/)
+- GitHub: [@Armynerh](https://github.com/Armynerh)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/kehinde-aminah-h/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
