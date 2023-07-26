@@ -131,6 +131,12 @@ You can deploy this project using:
 - Twitter: [@PatientMusafir1](https://twitter.com/PatientMusafir1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ishimwe-joseph-patient-0537b4155/)
 
+👤 **Kenny**
+
+- GitHub: [@ishimwepati](https://github.com/ishimwepati)
+- Twitter: [@PatientMusafir1](https://twitter.com/PatientMusafir1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ishimwe-joseph-patient-0537b4155/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
