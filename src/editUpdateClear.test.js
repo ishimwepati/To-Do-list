@@ -43,7 +43,7 @@ describe('clearCompletedTasks function', () => {
           const remainingTasks = clearCompletedTasks(tasks);
       
           expect(remainingTasks).toEqual([
-            { description: 'Task 2', completed: false },
+            { description: 'Task 2', completed: false, index: 0 },
           ]);
         });
       });
