@@ -69,6 +69,7 @@
 > - CSS added
 > - Preserved data in the LocalStorage
 > - Added HTML syntx from JS
+> - Added Tests using Jest
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
