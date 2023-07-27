@@ -1,4 +1,3 @@
-
 import editTask from './modules/EditTask.js';
 import taskStatusUpdate from './modules/TaskStatusUpdate.js';
 import clearCompletedTasks from './modules/ClearCompletedTasks.js';
@@ -34,16 +33,16 @@ describe('taskStatusUpdate function', () => {
 
 describe('clearCompletedTasks function', () => {
   test('It has to test if it removes completed tasks from the tasks array', () => {
-        const tasks = [
-            { description: 'Task 1', completed: true },
-            { description: 'Task 2', completed: false },
-            { description: 'Task 3', completed: true },
-          ];
-      
-          const remainingTasks = clearCompletedTasks(tasks);
-      
-          expect(remainingTasks).toEqual([
-            { description: 'Task 2', completed: false, index: 0 },
-          ]);
-        });
-      });
+    const tasks = [
+      { description: 'Task 1', completed: true },
+      { description: 'Task 2', completed: false },
+      { description: 'Task 3', completed: true },
+    ];
+
+    const remainingTasks = clearCompletedTasks(tasks);
+
+    expect(remainingTasks).toEqual([
+      { description: 'Task 2', completed: false, index: 0 },
+    ]);
+  });
+});
